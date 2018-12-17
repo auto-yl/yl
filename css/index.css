@@ -20,6 +20,12 @@ li{
 h4{
 
 }
+.com-popup{
+    width: 95%;
+}
+.com-popup-li{
+    line-height: 30px;
+}
 
 .t-p{
     background-color: #e9e9e9;
@@ -31,4 +37,7 @@ h4{
 }
 .t-input{
     margin: 3px 1rem;
+    height: 40px;
+    width: 80%;
+    outline: none;
 }
