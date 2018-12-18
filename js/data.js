@@ -11,7 +11,6 @@ var params = {
         {id:8,name:'CHA2DS2',url:'./page/CHA2DS2.html'},
         {id:9,name:'HASBLED',url:'./page/HASBLED.html'}
         ],
-
     data4T : [
         {
             title:'血小板减少',
@@ -47,6 +46,22 @@ var params = {
         }
     ],
 
+    Capirini:[
+
+    ],
+    Padua:[
+
+    ],
+    WellsDVT:[
+
+    ],
+    WellsPE:[
+
+    ],
+    GCapirini:[
+
+    ],
+
     confinementVTE:[
         {
             title:'其他致血小板减少原因',
@@ -56,7 +71,14 @@ var params = {
                 {text:'确定',value:0}
             ]
         }
-    ]
+    ],
+
+    tumourVTE:[],
+
+    CHA2DS2:[],
+
+    HASBLED:[]
+
 
 };
 this.globalParams = params;
