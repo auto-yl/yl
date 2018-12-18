@@ -25,6 +25,7 @@ h4{
 }
 .com-popup-li{
     line-height: 30px;
+    min-height: 40px;
 }
 
 .t-p{
@@ -36,8 +37,11 @@ h4{
     line-height: 40px;
 }
 .t-input{
-    margin: 3px 1rem;
+    margin: 3px 0px;
     height: 40px;
-    width: 80%;
+    width: 98%;
     outline: none;
+}
+.com-popup-li-span{
+    color:#959a9c;
 }

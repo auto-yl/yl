@@ -1,9 +1,16 @@
 var params = {
      nav : [
         {id:0,name:'4T评分',url:'./page/4T.html'},
-        {id:0,name:'4T评分',url:'./page/4T.html'},
-        {id:0,name:'4T评分',url:'./page/4T.html'}
-    ],
+        {id:1,name:'Capirini',url:'./page/Capirini.html'},
+        {id:2,name:'Padua',url:'./page/Padua.html'},
+        {id:3,name:'WellsDVT',url:'./page/WellsDVT.html'},
+        {id:4,name:'WellsPE',url:'./page/WellsPE.html'},
+        {id:5,name:'GCapirini',url:'./page/GCapirini.html'},
+        {id:6,name:'产期VTE',url:'./page/confinementVTE.html'},
+        {id:7,name:'肿瘤VTE',url:'./page/tumourVTE.html'},
+        {id:8,name:'CHA2DS2',url:'./page/CHA2DS2.html'},
+        {id:9,name:'HASBLED',url:'./page/HASBLED.html'}
+        ],
 
     data4T : [
         {
@@ -30,6 +37,17 @@ var params = {
                 {text:'无血栓形成',value:0}
             ]
         },
+        {
+            title:'其他致血小板减少原因',
+            data:[
+                {text:'无',value:2},
+                {text:'疑诊',value:1},
+                {text:'确定',value:0}
+            ]
+        }
+    ],
+
+    confinementVTE:[
         {
             title:'其他致血小板减少原因',
             data:[
