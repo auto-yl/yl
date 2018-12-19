@@ -6,13 +6,14 @@
     <!-- 引入 jQuery Mobile 样式 -->
     <link rel="stylesheet" href="./../css/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="./../css/index.css"/>
-    <title>肿瘤VTE</title>
+
+    <title>4T</title>
 </head>
 <body>
 <div data-role="page" id="4T">
 
     <div data-role="header" data-position="fixed" data-tap-toggle="false">
-        <h1>肿瘤VTE评分</h1>
+        <h1>HAS-BLED评分</h1>
     </div>
 
     <div data-role="main" class="ui-content" >
@@ -24,6 +25,10 @@
                 </div>
                 <div class="com-popup-li">
                     <span class="com-popup-li-span">分级：</span>
+                    <span id="grade"></span>
+                </div>
+                <div class="com-popup-li">
+                    <span class="com-popup-li-span">HAS-BLED推荐：</span>
                     <span id="suggest"></span>
                 </div>
             </div>
@@ -44,5 +49,5 @@
 <!-- 引入 jQuery Mobile 库 -->
 <script src="./../js/jquery.mobile-1.4.5.min.js"></script>
 <script src="./../js/data.js"></script>
-<script src="./../js/tumourVTE.js"></script>
+<script src="./../js/HASBLED.js"></script>
 </html>

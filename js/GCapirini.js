@@ -2,8 +2,9 @@ $(function(){
     var valueObj ={a:0};
     render4T();
     function render4T(){
+
         var HTML = "" ;
-        $.each(this.globalParams.confinementVTE,function(n,m){
+        $.each(this.globalParams.GCapirini,function(n,m){
             HTML+='<h2>'+ m.title +'</h2>' ;
             var li = "";
             $.each(m.data,function(y,x){
@@ -30,21 +31,22 @@ $(function(){
             value += valueObj[i] ;
         }
         $("#score").html(value);
-
-       //  =IF(AND(B30>3,D28=1,D29=""),"应考虑自早孕期起开始预防血栓",IF(AND(B30=3,D28=1,D29=""),"应考虑自孕28周起预防血栓形成",IF(AND(B30>1,D28="",D29=1),"应考虑产后至少10 d内预防血栓","血栓风险较低，可密切观察")))
-        var D28 =  valueObj["input3_0"]  ? valueObj["input3_0"] : 1 ;
-        var D29 =  valueObj["input3_1"]  ? valueObj["input3_1"] : "" ;
-
         var grade = "" , suggest ="";
-        if(value > 3 && D28 == 1 && D29 ==""){
-            suggest ="应考虑自早孕期起开始预防血栓";
-        }else if(value == 3 && D28 == 1 && D29 ==""){
-            suggest ="应考虑自孕28周起预防血栓形成";
-        }else if(value > 1&& D28 == "" && D29 ==1 ){
-            suggest ="应考虑产后至少10 d内预防血栓";
+        if(value == 0){
+            grade ="低危";
+            suggest = "低危患者术后尽早下床活动" ;
+        }else if(value == 1){
+            grade ="中危";
+            suggest ="患者术后采取LMWH或LDUH药物预防或机械性预防（GCS或IPC）"
+        }else if(value == 2){
+            grade = "<span style='color:red'>高危</span>";
+            suggest = "<span style='color:red'>高危患者，术后无大出血风险者，采取药物预防（LMWH或LDUH）；术后有大出血风险者，采取机械性、药物序贯预防，先机械性预防（IPC 为佳），待出血风险降低后改为药物预防</span>"
         }else{
-            suggest = "血栓风险较低，可密切观察";
+            grade = "<span style='color:red'>极高危</span>";
+            suggest = "<span style='color:red'>极高危患者，术后无大出血风险者，采取机械性与药物联合预防；术后大出血风险较高者，建议采取机械性、药物序贯预防，先机械性预防（IPC为佳），待出血风险降低后改为机械性与药物联合预防</span>";
+
         }
+        $("#grade").html(grade);
         $("#suggest").html(suggest);
 
     })

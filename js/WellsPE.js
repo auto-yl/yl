@@ -4,7 +4,7 @@ $(function(){
     function render4T(){
 
         var HTML = "" ;
-        $.each(this.globalParams.WellsDVT,function(n,m){
+        $.each(this.globalParams.WellsPE,function(n,m){
             HTML+='<h2>'+ m.title +'</h2>' ;
             var li = "";
             $.each(m.data,function(y,x){

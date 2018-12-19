@@ -212,6 +212,13 @@ var params = {
                 {text:'系统感染',value:1},
                 {text:'卧床，脱水',value:1}
             ]
+        },
+        {
+            title:'',
+            data:[
+                {text:'产前阶段',value:""},
+                {text:'产后阶段',value:1}
+            ]
         }
     ],
 
