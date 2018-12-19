@@ -8,7 +8,7 @@ var params = {
         {id:5,name:'GCapirini',url:'./page/GCapirini.html'},
         {id:6,name:'产期VTE',url:'./page/confinementVTE.html'},
         {id:7,name:'肿瘤VTE',url:'./page/tumourVTE.html'},
-        {id:8,name:'CHA2DS2',url:'./page/CHA2DS2ASc.html'},
+        {id:8,name:'CHA2DS2',url:'./page/CHA2DS2VASc.html'},
         {id:9,name:'HASBLED',url:'./page/HASBLED.html'}
         ],
     data4T : [
