@@ -20,7 +20,7 @@ $(function(){
         // e.stopPropagation();
         var el = $(e.currentTarget);
         var key = el.attr("data-id") , val = el.attr("data-value") , value = el.val();
-        valueObj[key] = parseInt(val) * value ;
+        valueObj[key] = val * value ;
     })
 
     $("#preview").on("click",function(e){

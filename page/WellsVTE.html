@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="./../css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./../css/index.css"/>
+
+    <title>4T</title>
+</head>
+<body>
+<div data-role="page" id="4T">
+
+    <div data-role="header" data-position="fixed" data-tap-toggle="false">
+        <h1>Wells-DVT评分</h1>
+    </div>
+
+    <div data-role="main" class="ui-content" >
+        <div data-role="popup" id="myPopup" data-overlay-theme="b">
+            <div  data-role="main" class="ui-content">
+                <div class="com-popup-li">
+                    <span class="com-popup-li-span">总分：</span>
+                    <span id="score"></span>
+                </div>
+
+                <div class="com-popup-li">
+                    <span class="com-popup-li-span">Wells推荐：</span>
+                    <span id="suggest"></span>
+                </div>
+            </div>
+        </div>
+        <div id="4T-content"></div>
+    </div>
+
+     <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+         <h1>
+             <a href="#myPopup" data-rel="popup" data-position-to="window" class="li-a-style" id="preview">查看结果</a>
+         </h1>
+     </div>
+
+</div>
+
+</body>
+<script src="./../js/jquery.min.js"></script>
+<!-- 引入 jQuery Mobile 库 -->
+<script src="./../js/jquery.mobile-1.4.5.min.js"></script>
+<script src="./../js/data.js"></script>
+<script src="./../js/WellsVTE.js"></script>
+</html>

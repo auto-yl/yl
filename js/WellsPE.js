@@ -2,8 +2,9 @@ $(function(){
     var valueObj ={a:0};
     render4T();
     function render4T(){
+
         var HTML = "" ;
-        $.each(this.globalParams.data4T,function(n,m){
+        $.each(this.globalParams.WellsDVT,function(n,m){
             HTML+='<h2>'+ m.title +'</h2>' ;
             var li = "";
             $.each(m.data,function(y,x){
@@ -30,21 +31,16 @@ $(function(){
             value += valueObj[i] ;
         }
         $("#score").html(value);
-        // =IF(B14<4,"低度可能",IF(B14>5,"高度可能","中度可能"))
         var grade = "" , suggest ="";
-        if(value < 4) {
-            grade = "低度可能";
-            suggest ="发生HIT可能性为低度可能";
-        }else if(value >5){
-            grade = "<span style='color:red'>高度可能</span>";
-            suggest ="发生HIT可能性为高度可能"
+        if(value < 4.1) {
+            grade ="肺栓塞不大可能";
+            suggest = "若D-二聚体阴性，可排除肺栓塞；若D-二聚体阳性，可行CTA检查。"
         }else{
-            grade = "中度可能";
-            suggest ="发生HIT可能性为中度可能";
+            grade ="<span style='color:red'>肺栓塞可能</span>" ;
+            suggest = "<span style='color:red'>不建议检测D-二聚体，行CTA检查</span>"
         }
         $("#grade").html(grade);
         $("#suggest").html(suggest);
 
-        //=IF(B15="低度可能","发生HIT可能性为低度可能",IF(B15="中度可能","发生HIT可能性为中度可能","发生HIT可能性为高度可能"))
     })
 })
