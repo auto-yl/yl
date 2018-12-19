@@ -41,6 +41,7 @@ h4{
     height: 40px;
     width: 98%;
     outline: none;
+    border:none;
 }
 .com-popup-li-span{
     color:#959a9c;
