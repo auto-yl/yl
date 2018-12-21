@@ -6,6 +6,9 @@ body{
 li{
     list-style: none;
 }
+.ui-checkbox label{
+    font-weight:normal;
+}
 .fl{
     float: left;
 }
