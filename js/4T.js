@@ -21,7 +21,7 @@ $(function(){
             suggest ="发生HIT可能性为低度可能";
         }else if(value >5){
             grade = "<span style='color:red'>高度可能</span>";
-            suggest ="发生HIT可能性为高度可能"
+            suggest ="<span style='color:red'>发生HIT可能性为高度可能</span>"
         }else{
             grade = "中度可能";
             suggest ="发生HIT可能性为中度可能";
