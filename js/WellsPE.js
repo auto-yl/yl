@@ -11,7 +11,7 @@ $(function(){
         // e.stopPropagation();
         var value = 0 ;
         for(var i in valueObj){
-            value += valueObj[i] ;
+            value +=parseFloat( valueObj[i]) ;
         }
         $("#score").html(value);
         var grade = "" , suggest ="";

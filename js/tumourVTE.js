@@ -10,7 +10,7 @@ $(function(){
         // e.stopPropagation();
         var value = 0 ;
         for(var i in valueObj){
-            value += valueObj[i] ;
+            value += parseFloat(valueObj[i]) ;
         }
         $("#score").html(value);
         // =IF(B7=0,"低危",IF(B7=1,"中危",IF(B7=2,"中危","高危")))

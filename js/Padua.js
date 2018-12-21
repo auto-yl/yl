@@ -12,11 +12,11 @@ $(function(){
         // e.stopPropagation();
         var value = 0 , value2 =0  ;
         for(var i in valueObj){
-            value += valueObj[i] ;
+            value += parseFloat(valueObj[i]) ;
         }
         var value2 = 0 ;
         for(var k in valueObj2){
-            value2 += valueObj2[k];
+            value2 +=parseFloat(valueObj2[k]);
         }
 
         $("#score").html(value);
