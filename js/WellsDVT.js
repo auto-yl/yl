@@ -1,27 +1,10 @@
 $(function(){
     var valueObj ={a:0};
-    render4T();
-    function render4T(){
-
-        var HTML = "" ;
-        $.each(this.globalParams.WellsDVT,function(n,m){
-            HTML+='<h2>'+ m.title +'</h2>' ;
-            var li = "";
-            $.each(m.data,function(y,x){
-                var index = "input"+ n +"_"+ y ;
-                li+='<div class=""><div class="t-list"><p class="t-p">'+x.text+'</p>' +
-                    '<input type="number" placeholder="请输入数值"  class="t-input" data-id="'+index+'" data-value="'+ x.value+'"></div>'
-            })
-            HTML = HTML + li ;
-        })
-        $("#4T-content").html(HTML);
-    }
-
-    $(".t-input").on("change",function(e){
-        // e.stopPropagation();
+    $(".checkEvent").on("click",function(e){
         var el = $(e.currentTarget);
-        var key = el.attr("data-id") , val = el.attr("data-value") , value = el.val();
-        valueObj[key] = val * value ;
+        var key = el.attr("data-id") , val = el.attr("data-value") ;
+        var isChecked = el.is(':checked');
+        valueObj[key] = isChecked ? val : 0;
     })
 
     $("#preview").on("click",function(e){
