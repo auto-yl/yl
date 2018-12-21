@@ -1,5 +1,6 @@
 $(function(){
     var valueObj ={a:0};
+    this.renderDom(this.globalParams.WellsPE);
     $(".checkEvent").on("click",function(e){
         var el = $(e.currentTarget);
         var key = el.attr("data-id") , val = el.attr("data-value") ;

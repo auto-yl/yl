@@ -267,7 +267,28 @@ var params = {
             ]
         }
     ]
-
-
 };
-this.globalParams = params;
+
+function renderDom(data){
+    var HTML = "" ;
+    $.each(data,function(n,m){
+        HTML+='<h2>'+ m.title +'</h2>' ;
+        var li = "";
+        $.each(m.data,function(y,x){
+            var index = "input"+ n +"_"+ y ;
+            li += '<fieldset data-role="controlgroup">' +
+                '            <label for='+index+'>'+x.text+'</label>' +
+                '            <input type="checkbox" name="favcolor"data-id="'+index+'" class="checkEvent" data-value="'+ x.value+'" id='+ index +' value="red">' +
+                '</fieldset>'
+        })
+        HTML = HTML + li ;
+    })
+    $("#4T-content").html(HTML);
+    $("#4T-content").trigger('create');
+
+}
+
+$(function(){
+    this.globalParams = params;
+    this.renderDom = renderDom;
+})

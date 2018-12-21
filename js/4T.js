@@ -1,5 +1,5 @@
 $(function(){
-
+    this.renderDom(this.globalParams.data4T);
     var valueObj ={};
     $(".checkEvent").on("click",function(e){
         var el = $(e.currentTarget);

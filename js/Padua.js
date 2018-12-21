@@ -1,6 +1,7 @@
 $(function(){
     var valueObj ={a:0};
     var valueObj2 ={a:0};
+    this.renderDom(this.globalParams.Padua);
     $(".checkEvent").on("click",function(e){
         var el = $(e.currentTarget);
         var key = el.attr("data-id") , val = el.attr("data-value") ;
